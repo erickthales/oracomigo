@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ora comigo?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        #pedido {
+            margin-top: 200px;
+            font-size: 24px;
+            animation: pulse 2s infinite;
+        }
+        
+        #botao {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #5cffa0;
+            color: #fff;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        #botao:hover {
+            background-color: #42ff6b;
+        }
+        
+        #nao {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff5c5c;
+            color: #fff;
+            font-size: 20px;
+            border: none;
+            cursor: not-allowed;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="pedido">
+        <h1>Lív, Você é a mulher mais linda do mundo...</h1>
+        <p>e você não tem noção do quanto é especial.</p>
+        <p>Sempre que estou contigo, sinto que posso ser eu mesmo e ser feliz.</p>
+        <p>Você aceita orar comigo?</p>
+        <button id="botao">Sim, eu aceito!</button>
+        <button id="nao" disabled>Não</button>
+    </div>
+    
+    <script>
+        var botaoElement = document.getElementById("botao");
+        botaoElement.addEventListener("click", function() {
+            var pedidoElement = document.getElementById("pedido");
+            pedidoElement.innerHTML = "<h1>Parabéns pra nós!</h1><p>Tomamos a melhor decisão das nossas vidas!</p>";
+        });
+    </script>
+</body>
+</html>
